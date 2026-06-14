@@ -1,41 +1,41 @@
 # F28384D_SANDBOX
 
-Public F28384D sandbox repository for board-level experiments and peripheral validation.
+F28384D board-level experiments 與 peripheral validation 用的公開 sandbox repository。
 
-This repository is a sandbox. It is meant for isolated experiments, bring-up notes, and reproducible validation snippets. It is not an ASR5K production firmware mainline.
+這個 repo 是 sandbox。用途是放隔離實驗、bring-up notes、可重現 validation snippets。它不是 ASR5K production firmware mainline。
 
-## Repository Role
+## 1. Repository 角色
 
-- **Purpose:** F28384D board-level experiments and peripheral validation.
-- **Status:** lab sandbox.
-- **Visibility:** public.
-- **Scope:** isolated prototypes, hardware bring-up, driver experiments, and validation code.
-- **Production status:** not production firmware and not an ASR5K source of truth.
+- **用途：** F28384D board-level experiments and peripheral validation。
+- **狀態：** lab sandbox。
+- **可見性：** public。
+- **範圍：** isolated prototypes、hardware bring-up、driver experiments、validation code。
+- **正式產品狀態：** 不是 production firmware，也不是 ASR5K source of truth。
 
-## Intended Contents
+## 2. Intended contents
 
-Use this repository for small, explicit experiments such as:
+此 repo 適合放小型、明確的實驗，例如：
 
 - board bring-up checks
 - GPIO / clock / peripheral validation
 - driver experiments
 - minimal reproduction projects
 - hardware validation notes
-- temporary sandbox code before promotion to a real project
+- promotion 到正式 project 前的 temporary sandbox code
 
-## What Should Not Go Here
+## 3. What should not go here
 
-Do not use this repository for:
+不要把此 repo 用於：
 
 - ASR5K production firmware
-- confidential product code
-- private board documents that are not cleared for public release
-- bulk backups or build output
+- 未整理、未審查的產品資料
+- 未確認可公開的 board documents
+- bulk backups 或 build output
 - unrelated MCU projects
 
-## Experiment Documentation Template
+## 4. Experiment documentation template
 
-Each experiment should record:
+每個 experiment 應記錄：
 
 ```text
 Experiment name:
@@ -49,18 +49,18 @@ Observed result:
 Status: PASS / FAIL / WIP
 ```
 
-## Promotion Rule
+## 5. Promotion rule
 
-Sandbox code can move into a production or private project only after:
+Sandbox code 只有在完成下列事項後，才能移入 production 或 private project：
 
 1. code review
 2. build verification
 3. target-hardware validation
 4. clear ownership decision
 
-## Working Rules
+## 6. Working rules
 
-1. Keep experiments small and independently reproducible.
-2. Record the target board, toolchain, wiring, and expected result for each test.
-3. Do not merge sandbox code into production without review and hardware verification.
-4. Do not commit credentials, generated build output, or licensed binaries without review.
+1. experiments 要小、獨立、可重現。
+2. 每個 test 都要記錄 target board、toolchain、wiring、expected result。
+3. sandbox code 未 review 與 hardware verification 前，不要 merge 到 production。
+4. 不要 commit generated build output 或未審查的 binary。
